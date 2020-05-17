@@ -8,4 +8,13 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %header.navbar.navbar-expand-sm.navbar-dark.bg-dark
+      .container
+        = link_to 'Sleep Tracker', '#', {id: 'logo', class: 'navbar-brand'}
+        %nav
+          %ul.navbar.navbar-nav.navbar-right
+            %li.nav-item= link_to 'Home', '#', class: 'nav-link'
+            %li.nav-item= link_to 'Help', '#', class: 'nav-link'
+            %li.nav-item= link_to 'Log In', '#', class: 'nav-link'
+    .container
+      = yield
