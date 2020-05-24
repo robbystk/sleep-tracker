@@ -1,0 +1,4 @@
+@use "sass:map";
+
+$gray: map-get($colors, "gray");
+$gray-dark: map-get($colors, "gray-dark");

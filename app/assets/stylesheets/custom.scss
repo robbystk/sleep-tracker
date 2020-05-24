@@ -1,0 +1,28 @@
+footer {
+  border-top: 1px solid $gray-300;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  small {
+    padding-top: 0.25rem;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    li {
+      a {
+        font-size: 80%;
+        color: $gray;
+        padding: 0.5rem;
+      }
+
+      a:hover {
+        color: $gray-dark;
+      }
+    }
+  }
+}
