@@ -1,5 +1,5 @@
 class SleepRecorder
   def self.start_sleep
-    SleepRecord.new
+    SleepRecord.create!(sleep_time: DateTime.now)
   end
 end
