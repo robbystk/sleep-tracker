@@ -12,5 +12,6 @@ Then("The button changes to {string}") do |string|
 end
 
 Then("A sleep record is started") do
-  pending # Write code here that turns the phrase above into concrete actions
+  record = SleepRecord.last
+  expect(record.sleep_time).to be_within(1).of(DateTime.now)
 end
