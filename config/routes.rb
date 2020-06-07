@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root 'sleep_tracker#track'
   post :sleep, to: 'sleep_tracker#sleep'
+  post :wake, to: 'sleep_tracker#wake'
 end

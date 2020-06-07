@@ -1,1 +1,4 @@
-=button_to 'Go To Sleep', sleep_path, class: 'btn btn-primary'
+- if @sleep_record
+  = button_to 'Wake Up', wake_path, class: 'btn btn-primary'
+- else
+  = button_to 'Go To Sleep', sleep_path, class: 'btn btn-primary'

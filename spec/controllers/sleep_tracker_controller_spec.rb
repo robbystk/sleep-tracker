@@ -12,4 +12,9 @@ RSpec.describe SleepTrackerController do
     expect(SleepRecorder).to receive(:start_sleep)
     post :sleep
   end
+
+  it 'redirects after post' do
+    post :sleep
+    expect(response).to have_http_status(:found)
+  end
 end

@@ -7,8 +7,8 @@ When("clicks on the 'Go To Sleep' button") do
   btn.click
 end
 
-Then("The button changes to {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("The button changes to 'Wake Up'") do
+  find_button('Wake Up')
 end
 
 Then("A sleep record is started") do

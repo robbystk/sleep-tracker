@@ -11,4 +11,16 @@ RSpec.describe SleepRecord, type: :model do
     expect(record.save).to be false
     expect(record.errors.messages).to include(sleep_time: ["can't be blank"])
   end
+
+  it "retrieves the last incomplete record" do
+    complete = described_class.create!(
+      sleep_time: 10.hours.ago,
+      wake_time: 2.hours.ago
+    )
+    incomplete = described_class.create!(
+      sleep_time: 4.hours.ago
+    )
+
+    expect(described_class.last_unfinished).to eq incomplete
+  end
 end

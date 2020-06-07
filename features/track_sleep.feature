@@ -5,6 +5,6 @@ Feature: Sleep tracking
         # Given The user is logged in
         When The user visits the site
         And clicks on the 'Go To Sleep' button
-        # Then The button changes to 'Wake up'
-        And A sleep record is started
+        Then A sleep record is started
+        And The button changes to 'Wake Up'
 
