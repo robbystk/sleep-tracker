@@ -11,20 +11,11 @@ RSpec.describe SleepTrackerController do
   it 'creates a new sleep record' do
     expect(SleepRecorder).to receive(:start_sleep).and_return(sleep_record)
     post :sleep
-  end
-
-  it 'redirects after sleep action' do
-    post :sleep
     expect(response).to have_http_status(:found)
   end
 
   it 'stops an existing sleep record' do
     expect(SleepRecorder).to receive(:stop_sleep_for).and_return(sleep_record)
-    post :wake
-  end
-
-  it 'redirects after wake action' do
-    allow(SleepRecorder).to receive(:stop_sleep_for).and_return(sleep_record)
     post :wake
     expect(response).to have_http_status(:found)
   end
