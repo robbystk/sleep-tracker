@@ -11,8 +11,8 @@ class SleepTrackerController < ApplicationController
   end
 
   def wake
-    @sleep_record = SleepRecorder.stop_sleep_for
-    redirect_to sleep_record_path(@sleep_record.id)
+    sleep_record = SleepRecorder.stop_sleep_for
+    redirect_to sleep_record_path(sleep_record)
   end
 
   private
