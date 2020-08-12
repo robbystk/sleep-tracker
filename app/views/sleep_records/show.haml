@@ -1,2 +1,11 @@
-= @sleep_record.sleep_time
-= @sleep_record.wake_time
+%h1 Sleep Record
+%table
+  %tr
+    %td Sleep Time
+    %td= @sleep_record.sleep_time
+  %tr
+    %td Wake Time
+    %td= @sleep_record.wake_time
+  %tr
+    %td Duration
+    %td= duration_between(@sleep_record.sleep_time, @sleep_record.wake_time)

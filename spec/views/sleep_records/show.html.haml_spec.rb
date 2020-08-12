@@ -10,6 +10,7 @@ RSpec.describe "sleep_records/show", type: :view do
   it 'displays the sleep record details' do
     assign(:sleep_record, sleep_record)
     render
-    expect(rendered).to match(DateTime.now.to_s)
+    expect(rendered).to match DateTime.now.to_s
+    expect(rendered).to match '8:00'
   end
 end
