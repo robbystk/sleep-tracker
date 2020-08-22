@@ -8,4 +8,12 @@ RSpec.describe SleepRecordsController, type: :controller do
     expect(response).to render_template('sleep_records/show')
     expect(assigns(:sleep_record)).to eq record
   end
+
+  it 'allows editing of an existing sleep record' do
+    record = instance_double('SleepRecord')
+    allow(SleepRecord).to receive(:find).and_return(record)
+    get :edit, params: {id: 10}
+    expect(response).to render_template('sleep_records/edit')
+    expect(assigns(:sleep_record)).to eq record
+  end
 end
