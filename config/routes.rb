@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   post :sleep, to: 'sleep_tracker#sleep'
   post :wake, to: 'sleep_tracker#wake'
 
-  resources :sleep_records, only: [:show]
+  resources :sleep_records, only: [:show, :edit]
 end

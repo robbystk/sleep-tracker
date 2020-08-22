@@ -14,4 +14,4 @@ Feature: Sleep tracking
         When The user visits the site
         And clicks on the 'Wake Up' button
         Then The sleep record is finished
-        And The sleep record is displayed
+        And The sleep record can be edited
