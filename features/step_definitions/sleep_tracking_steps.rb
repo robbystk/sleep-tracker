@@ -25,6 +25,12 @@ Then("The sleep record is finished") do
   expect(record.wake_time).to be_within(1).of(DateTime.now)
 end
 
+Then("The sleep record can be edited") do
+  expect(page).to have_field('Sleep time')
+  expect(page).to have_field('Wake time')
+  expect(page).to have_button('Update')
+end
+
 Then("The sleep record is displayed") do
   expect(page).to have_text(Date.today.to_s)
 end

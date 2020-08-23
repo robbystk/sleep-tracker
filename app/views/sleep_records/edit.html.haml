@@ -1,0 +1,12 @@
+%h1 Edit Sleep Record
+.container
+  = form_for @sleep_record do |f|
+    .form-group.row
+      = f.label :sleep_time, class: 'col-md-5'
+      = f.datetime_field :sleep_time, class: 'form-control col-md-7'
+    .form-group.row
+      = f.label :wake_time, class: 'col-md-5'
+      = f.datetime_field :wake_time, class: 'form-control col-md-7'
+    .form-group.row
+      .col-md-12
+        = f.submit class: 'btn btn-primary float-right'
