@@ -3,6 +3,7 @@ Feature: Sleep records
 
     Scenario: Editing an existing sleep record
         # Given The user is logged in
+        Given An existing sleep record
         When The user visits the edit page
         And Enters sleep record data
         And Clicks on the 'Update' button
