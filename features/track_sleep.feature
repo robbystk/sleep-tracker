@@ -15,11 +15,3 @@ Feature: Sleep tracking
         And clicks on the 'Wake Up' button
         Then The sleep record is finished
         And The sleep record can be edited
-
-    Scenario: Editing sleep records
-        # Given The user is logged in
-        When The user visits the edit page
-        And Enteres sleep record data
-        And Clicks on the 'Update' button
-        Then The sleep record is updated
-        And The sleep record is shown
