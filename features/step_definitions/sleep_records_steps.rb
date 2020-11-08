@@ -19,9 +19,7 @@ When("Clicks on the 'Update' button") do
 end
 
 Then("The sleep record is updated") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("The sleep record is shown") do
-  pending # Write code here that turns the phrase above into concrete actions
+  record = SleepRecord.last
+  expect(record.sleep_time).to be_within(1).of (8.hours + 5.minutes).ago
+  expect(record.wake_time).to be_within(1).of 5.minutes.from_now
 end

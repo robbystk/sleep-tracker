@@ -8,4 +8,4 @@ Feature: Sleep records
         And Enters sleep record data
         And Clicks on the 'Update' button
         Then The sleep record is updated
-        And The sleep record is shown
+        And The sleep record is displayed
